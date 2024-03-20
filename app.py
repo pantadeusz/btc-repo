@@ -10,8 +10,6 @@ def get_balance():
 @app.route("/")
 def hello_world():
     balance = get_balance()
-    confirmed = 0
-    unconfirmed = 0
     confirmed = balance["mine"]["trusted"]
     unconfirmed = balance["mine"]["untrusted_pending"]
     return "<h2>Zbieram na czesne tb1qgj5x6kw7a6dsx87fl5ysrfrnzxz3uj0pcp9ekm</h2><p>" + str(confirmed) + " " + str(unconfirmed) + "</p>"
